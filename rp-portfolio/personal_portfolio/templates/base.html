@@ -1,0 +1,58 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'welcome' %}"><b><img width=30 px; src="{% static "download.jpeg" %}" alt="My image"/>Portfolio<b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'project_index' %}">Projects</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'contact' %}">contact</a>
+            </li>
+
+          </ul>
+        </div>
+    </div>
+
+</nav>
+<div class="container">
+    {% block page_content %}
+    <h1 >WELCOME TO DJANGO DEMO!</h1>
+    <p> Hello! I am Brahada and this is a dummy portfolio project using django.<br>Here I have made use of customized forms,user permissions, admin UI and many other things which helped me understand Django better :)</p>
+    <h3 style="background-color: lightblue;">Why Django?</h1>
+    <p>So, What is the Django Framework?
+Django is an open-source framework for backend web applications based on Python — one of the top web development languages. Its main goals are simplicity, flexibility, reliability, and scalability.
+
+Django has its own naming system for all functions and components (e.g., HTTP responses are called “views”). It also has an admin panel, which is deemed easier to work with than in Lavarel or Yii, and other technical features, including:
+<ul>
+<li>Simple syntax;</li>
+<li>Its own web server;</li>
+<li>MVC (Model-View-Controller) core architecture;</li>
+<li>“Batteries included” (comes with all the essentials needed to solve solving common cases);</li>
+<li>An ORM (Object Relational Mapper);</li>
+<li>HTTP libraries;</li>
+<li>Middleware support;
+<li>A Python unit test framework.</li>
+</ul>
+<h6 style="background-color: lightblue;"> <b>Note:<b>To access admin page, click on the link and access through your credentials:<a href="http://127.0.0.1:8000/admin/">here</a></h6>
+
+    <img src="{% static "port.png" %}" alt="My image"/>
+</p>
+    {% endblock %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
